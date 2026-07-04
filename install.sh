@@ -33,9 +33,12 @@ sudo systemctl enable tuned
 printf "=== Now run:\n\treboot"
 echo
 
-# Prompt to login to Git
+# Prompt to login to GitHub
 printf "=== Now run:\n\tgh auth login\n"
 echo
+
+# Set default Git editor
+git config --global core.editor "nvim"
 
 printf "=== Now run:\n\tfirefox\nvia drun and install the extensions:
 \tVimiumC
