@@ -9,6 +9,7 @@ tuned
 pipewire
 pipewire-pulse
 wireplumber
+reaper
 
 # Hyprland (Wayland)
 hypridle
@@ -20,6 +21,9 @@ qt6-wayland
 sddm
 waybar
 xdg-desktop-portal-hyprland
+grim
+slurp
+swappy
 
 # Terminal
 kitty
@@ -41,9 +45,14 @@ imagemagick
 tree
 typst
 zoxide
+tldr
 
 # Editors
 neovim
+
+# Development
+godot
+blender
 
 # Fonts
 noto-fonts
