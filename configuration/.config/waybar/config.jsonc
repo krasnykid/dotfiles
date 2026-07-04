@@ -1,0 +1,22 @@
+{
+  "layer": "top",
+  "position": "top",
+  "spacing": 0,
+
+  // Left side
+  "modules-left": ["hyprland/workspaces"],
+
+  "modules-center": ["clock"],
+
+  // Right side
+  "modules-right": [
+    "pulseaudio/slider",
+    "bluetooth",
+    "network",
+    "custom/sysmon",
+    "battery",
+  ],
+
+  // Load module definitions
+  "include": ["~/.config/waybar/modules.json"],
+}

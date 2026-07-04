@@ -1,0 +1,63 @@
+{
+  "pulseaudio": {
+    "format": "{volume}%",
+    "max-volume": 100,
+    "scroll-step": 5,
+    "format-muted": ""
+  },
+
+  "pulseaudio/slider": {
+    "min": 0,
+    "max": 100,
+    "orientation": "horizontal"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "{status}",
+    "on-click": "blueman"
+  },
+
+  "network": {
+    "format-wifi": "",
+    "tooltip": true,
+    "tooltip-format": "SSID: {essid}\nSignal: {signalStrength}%\nSpeed: {bandwidthDownBits} ↓ / {bandwidthUpBits} ↑",
+    "format-ethernet": "",
+    "format-disconnected": "⚠",
+    "interval": 2
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": ""
+    },
+    "disable-scroll": true,
+    "show-special": true
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-icons": ["", "", "", ""],
+    "tooltip": true,
+    "tooltip-format": "{capacity}%"
+  },
+
+  "clock": {
+    "format": "{:%e %B %I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "custom/power": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "~/.config/waybar/scripts/powermenu.sh"
+  }
+}

@@ -1,0 +1,9 @@
+
+# Add Pay Respects
+eval "$(pay-respects zsh)"
+
+eval "$(zoxide init zsh)"
+
+# Optional but highly recommended aliases:
+alias j="z"
+alias jj="zi"

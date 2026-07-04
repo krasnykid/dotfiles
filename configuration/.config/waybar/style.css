@@ -1,0 +1,71 @@
+* {
+    font-family:
+        "JetbrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial,
+        sans-serif;
+}
+
+window#waybar {
+    background: transparent;
+    color: #e6e8ee; /* main foreground text */
+    font-size: 12px;
+    font-family:
+        SpaceMono Nerd Font,
+        feather;
+}
+
+#bluetooth,
+#network,
+#battery {
+    margin: 0px 16px;
+    text-shadow: 0px 0px 5px white;
+}
+
+#clock {
+    font-weight: 600;
+    padding: 0px 10px;
+    text-shadow: 0px 0px 4px #888888;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 0px 10px;
+}
+
+#workspaces button {
+    background: transparent;
+    font-weight: 400;
+    color: #777777;
+    border: none;
+}
+
+#workspaces button:hover {
+    color: #aaaaaa;
+    font-weight: 900;
+}
+
+#workspaces button.active {
+    color: white;
+    font-weight: 900;
+    text-shadow: 0px 0px 5px white;
+}
+
+#pulseaudio-slider slider {
+    min-height: 0px;
+    opacity: 0;
+    background-image: none;
+    border: none;
+}
+
+#pulseaudio-slider trough {
+    min-height: 4px;
+    min-width: 100px;
+    border-radius: 5px;
+    background-color: #0c0c0c;
+}
+#pulseaudio-slider highlight {
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: #e6e8ee;
+    box-shadow: 0px 0px 5px white;
+}

@@ -1,0 +1,6 @@
+printf "Checking pacman packages against config...\n"
+comm -23 <(pacman -Qqen | sort) <(sort ./pacman ./aur | uniq)   # repo, not in either list
+echo
+printf "Checking AUR packages against config...\n"
+comm -23 <(pacman -Qqem | sort) <(sort ./pacman ./aur | uniq)   # AUR, not in either listcomm -23 <(pacman -Qqem | sort) <(sort ./aur)      # AUR, not in list
+
