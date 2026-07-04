@@ -1,11 +1,15 @@
 #!/usr/bin/env bash
 
+strip_blanks_comments() {
+  grep -v '^\s*#' "$1" | grep -v '^\s*$'
+}
+
 # Update system
 echo "=== Updating system..."
 sudo pacman -Syu --noconfirm
 
 # Install packages
-sudo pacman -S --needed --noconfirm - < pkgs/pacman
+sudo pacman -S --needed --noconfirm - <  <(strip_blanks_comments pkgs/pacman)
 
 # Install paru
 if ! command -v paru &>/dev/null; then
@@ -16,7 +20,8 @@ fi
 
 cd ~/dotfiles
 
-paru -S --needed --noconfirm - < pkgs/aur
+# Install AUR
+paru -S --needed --noconfirm - < <(strip_blanks_comments pkgs/aur)
 
 if ! command -v stow &>/dev/null; then
 	sudo pacman -S --needed --noconfirm stow

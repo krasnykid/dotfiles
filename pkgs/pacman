@@ -1,49 +1,51 @@
+# Base/system
 base-devel
+gcc
 git
 networkmanager
+tuned
+
+# Audio
 pipewire
 pipewire-pulse
 wireplumber
 
-neovim
-
-hyprland
-hyprpaper
-hyprlock
+# Hyprland (Wayland)
 hypridle
-waybar
-xdg-desktop-portal-hyprland
+hyprland
+hyprlock
+hyprpaper
 qt5-wayland
 qt6-wayland
-
 sddm
+waybar
+xdg-desktop-portal-hyprland
 
+# Terminal
 kitty
 zsh
 
-rofi-wayland
+# Apps
 dunst
+rofi-wayland
 thunar
 wl-clipboard
-brightnessctl
-
-tuned
-
-ttf-jetbrains-mono-nerd
-noto-fonts
-noto-fonts-emoji
-
-github-cli
-
-tree
-
-zoxide
-fzf
-
+zathura
 zed
 
-typst
-zathura
-gcc
+# CLI tools
+brightnessctl
+fzf
+github-cli
 imagemagick
+tree
+typst
+zoxide
 
+# Editors
+neovim
+
+# Fonts
+noto-fonts
+noto-fonts-emoji
+ttf-jetbrains-mono-nerd
