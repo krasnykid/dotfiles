@@ -1,4 +1,4 @@
-@import "~/.cache/wal/colors-rofi-dark"
+// @import "~/.cache/wal/colors-rofi-dark"
 
 configuration {
 /*	modes: "window,drun,run,ssh";*/

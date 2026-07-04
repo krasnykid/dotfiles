@@ -40,12 +40,6 @@ echo
 # Set default Git editor
 git config --global core.editor "nvim"
 
-printf "=== Now run:\n\tfirefox\nvia drun and install the extensions:
-\tVimiumC
-\tuBlockOrigin
-	"
-echo 
-
 # Install OhMyZsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
