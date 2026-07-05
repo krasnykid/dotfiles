@@ -16,14 +16,15 @@ hypridle
 hyprland
 hyprlock
 hyprpaper
+hyprpolkitagent
 qt5-wayland
 qt6-wayland
-sddm
 waybar
 xdg-desktop-portal-hyprland
 grim
 slurp
 swappy
+python-pywal
 
 # Terminal
 kitty
@@ -36,6 +37,7 @@ thunar
 wl-clipboard
 zathura
 zed
+kdeconnect
 
 # CLI tools
 brightnessctl

@@ -31,7 +31,6 @@ cd ~/dotfiles
 stow -v -t "$HOME" configuration
 
 sudo systemctl enable --now NetworkManager
-sudo systemctl enable sddm
 sudo systemctl enable tuned
 
 # Prompt to restart
@@ -52,6 +51,3 @@ echo "=== Setting zsh as default shell (optional)"
 if [ "$SHELL" != "$(command -v zsh)" ]; then
   chsh -s "$(command -v zsh)"
 fi
-
-
-
