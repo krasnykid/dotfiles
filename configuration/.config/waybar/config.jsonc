@@ -6,7 +6,7 @@
   // Left side
   "modules-left": ["hyprland/workspaces"],
 
-  "modules-center": ["clock"],
+  "modules-center": ["hyprland/window"],
 
   // Right side
   "modules-right": [
@@ -15,6 +15,7 @@
     "network",
     "custom/sysmon",
     "battery",
+    "clock",
   ],
 
   // Load module definitions

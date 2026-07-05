@@ -37,6 +37,10 @@
     "show-special": true
   },
 
+  "hyprland/window": {
+    "separate-outputs": true
+  },
+
   "battery": {
     "states": {
       "warning": 30,

@@ -35,7 +35,8 @@ window#waybar {
 #workspaces button {
     background: transparent;
     font-weight: 400;
-    color: #777777;
+    /*color: #777777;*/
+    color: rgba(100, 100, 100, 0.3); /* Czarne tło z 50% przezroczystości */
     border: none;
 }
 
@@ -55,16 +56,31 @@ window#waybar {
     opacity: 0;
     background-image: none;
     border: none;
+    /* Usuwanie domyślnego cienia i poświaty */
+    box-shadow: none;
+    outline: none;
+
+    /* Resetowanie natywnego wyglądu systemowego */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+/* Jeśli poświata pojawia się przy aktywacji/skupieniu (focus) */
+#pulseaudio-slider slider:focus,
+#pulseaudio-slider slider:active {
+    outline: none;
+    box-shadow: none;
 }
 
 #pulseaudio-slider trough {
     min-height: 4px;
     min-width: 100px;
     border-radius: 5px;
-    background-color: #0c0c0c;
+    background-color: rgba(12, 12, 12, 0.3);
 }
+
 #pulseaudio-slider highlight {
-    min-width: 10px;
+    min-width: 16px;
     border-radius: 5px;
     background-color: #e6e8ee;
     box-shadow: 0px 0px 5px white;
