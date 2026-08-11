@@ -10,6 +10,7 @@ pipewire
 pipewire-pulse
 wireplumber
 reaper
+pavucontrol
 
 # Hyprland (Wayland)
 hypridle
@@ -48,6 +49,8 @@ tree
 typst
 zoxide
 tldr
+just
+htop
 
 # Editors
 neovim
@@ -55,8 +58,13 @@ neovim
 # Development
 godot
 blender
+docker
+docker-compose
 
 # Fonts
 noto-fonts
 noto-fonts-emoji
 ttf-jetbrains-mono-nerd
+
+# Games
+modrinth-app
