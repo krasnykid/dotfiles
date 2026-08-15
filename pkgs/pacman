@@ -4,6 +4,9 @@ gcc
 git
 networkmanager
 tuned
+bluez
+bluez-utils
+bluez-deprecated-tools
 
 # Audio
 pipewire

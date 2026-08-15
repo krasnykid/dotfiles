@@ -1,0 +1,16 @@
+source ~/.config/nvim/shared.vim
+
+set surround
+set which-key
+let g:WhichKey_FontSize = 20
+set highlightedyank
+set commentary
+set clipboard+=unnamed
+set clipboard+=ideaput
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase 
+set scrolloff=5
+set history=1000
+set timeoutlen=150
