@@ -38,10 +38,18 @@ zsh
 dunst
 rofi-wayland
 thunar
+gvfs
+thunar-archive-plugin
+tumbler
+ffmpegthumbnailer
+xarchiver
 wl-clipboard
 zathura
+zathura-cb
+zathura-pdf-mupdf
 zed
 kdeconnect
+signal-desktop
 
 # CLI tools
 brightnessctl
