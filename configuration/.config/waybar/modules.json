@@ -34,7 +34,11 @@
       "default": ""
     },
     "disable-scroll": true,
-    "show-special": true
+    "show-special": false,
+    "persistent-only": true,
+    "persistent-workspaces": {
+      "*": [1, 2, 3, 4, 5]
+    }
   },
 
   "hyprland/window": {
