@@ -1,6 +1,6 @@
 -- https://wiki.hypr.land/0.57.0/configuring/core/rules/
 
--- Keep the five numbered workspaces alive for the Waybar workspace buttons.
+-- keep the five numbered workspaces alive for the Waybar workspace buttons.
 for workspace = 1, 5 do
     hl.workspace_rule({ workspace = tostring(workspace), persistent = true })
 end

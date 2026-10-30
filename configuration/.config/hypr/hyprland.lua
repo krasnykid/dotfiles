@@ -12,7 +12,7 @@ require("./misc")
 hl.config({
     general = {
         gaps_in = 8,
-        gaps_out = { top = 0, right = 16, bottom = 16, left = 16 },
+        gaps_out = { top = 4, right = 8, bottom = 8, left = 8 },
 
         border_size = 0,
 
