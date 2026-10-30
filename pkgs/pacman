@@ -50,6 +50,7 @@ zathura-pdf-mupdf
 zed
 kdeconnect
 signal-desktop
+opencode
 
 # CLI tools
 brightnessctl
@@ -79,3 +80,9 @@ ttf-jetbrains-mono-nerd
 
 # Games
 modrinth-app
+
+# Video player
+vlc
+
+# zram
+zram-generator
