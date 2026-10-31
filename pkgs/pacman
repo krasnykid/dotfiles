@@ -63,6 +63,7 @@ zoxide
 tldr
 just
 htop
+jq
 
 # Editors
 neovim

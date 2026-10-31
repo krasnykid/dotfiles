@@ -8,6 +8,14 @@ require("./autostart")
 require("./keybinds")
 require("./misc")
 
+local function refresh_layout_bar()
+    hl.exec_cmd("sleep 0.1; pkill -RTMIN+8 waybar")
+end
+
+hl.on("workspace.active", refresh_layout_bar)
+hl.on("workspace.special_active", refresh_layout_bar)
+hl.on("monitor.focused", refresh_layout_bar)
+
 -- https://wiki.hypr.land/Configuring/Variables/#general
 hl.config({
     general = {

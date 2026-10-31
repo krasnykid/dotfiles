@@ -30,10 +30,24 @@ modbind("K", hl.dsp.focus({ direction = "u" }))
 modbind("J", hl.dsp.focus({ direction = "d" }))
 
 -- resize windows with SUPER + Ctrl + motion
-modbind("CTRL + H", hl.dsp.window.resize({ x = -resizeStep, y = 0, relative = true }), { repeating = true })
-modbind("CTRL + L", hl.dsp.window.resize({ x = resizeStep, y = 0, relative = true }), { repeating = true })
-modbind("CTRL + K", hl.dsp.window.resize({ x = 0, y = resizeStep, relative = true }), { repeating = true })
-modbind("CTRL + J", hl.dsp.window.resize({ x = 0, y = -resizeStep, relative = true }), { repeating = true })
+local colStep = 0.125  -- fraction of screen width per press
+
+local function resize(dx, dy)
+    return function()
+        local ws = hl.get_active_special_workspace() or hl.get_active_workspace()
+        if ws and ws.tiled_layout == "scrolling" and dx ~= 0 then
+            hl.dispatch(hl.dsp.layout("colresize " .. (dx > 0 and "+" or "-") .. colStep))
+            hl.dispatch(hl.dsp.layout("fit_into_view"))
+        else
+            hl.dispatch(hl.dsp.window.resize({ x = dx, y = dy, relative = true }))
+        end
+    end
+end
+
+modbind("CTRL + H", resize(-resizeStep, 0), { repeating = true })
+modbind("CTRL + L", resize( resizeStep, 0), { repeating = true })
+modbind("CTRL + K", resize(0,  resizeStep), { repeating = true })
+modbind("CTRL + J", resize(0, -resizeStep), { repeating = true })
 
 -- move windows
 modbind("SHIFT + H", hl.dsp.window.move({ direction = "l" }))
@@ -56,6 +70,15 @@ end
 -- move/resize windows with mainMod + LMB/RMB and dragging
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+-- toggle between master and scrolling layouts
+hl.bind("SUPER + TAB", function()
+    local ws = hl.get_active_workspace()
+    if not ws then return end
+    local next_layout = (ws.tiled_layout == "dwindle") and "scrolling" or "dwindle"
+    hl.workspace_rule({ workspace = tostring(ws.id), layout = next_layout })
+    hl.exec_cmd("sleep 0.1; pkill -RTMIN+8 waybar")
+end)
 
 -- laptop multimedia keys for volume and LCD brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { repeating = true, locked = true })

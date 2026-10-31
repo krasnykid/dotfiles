@@ -4,7 +4,10 @@
   "spacing": 0,
 
   // Left side
-  "modules-left": ["hyprland/workspaces"],
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/layout",
+  ],
 
   "modules-center": ["hyprland/window"],
 
@@ -17,6 +20,18 @@
     "battery",
     "clock",
   ],
+
+  "custom/layout": {
+      "exec": "~/.config/waybar/scripts/layout.sh",
+      "return-type": "json",
+      "signal": 8,
+      "format": "{icon}",
+      "format-icons": {
+          "dwindle": "󰕰",
+          "scrolling": "",
+          "default": "?"
+      }
+  },
 
   // Load module definitions
   "include": ["~/.config/waybar/modules.json"],
