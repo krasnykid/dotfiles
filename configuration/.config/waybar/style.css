@@ -1,7 +1,10 @@
 * {
     font-family:
+        Inter,
         "JetbrainsMono Nerd Font", FontAwesome, Roboto, Helvetica, Arial,
         sans-serif;
+    font-weight: 600;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 window#waybar {
@@ -17,13 +20,11 @@ window#waybar {
 #network,
 #battery {
     margin: 0px 16px;
-    text-shadow: 0px 0px 5px white;
 }
 
 #clock {
     font-weight: 600;
     padding: 0px 10px;
-    text-shadow: 0px 0px 4px #888888;
 }
 
 .modules-left,
@@ -39,7 +40,6 @@ window#waybar {
     border: none;
     /* Keep glyph weight constant so switching never shifts the dots. */
     font-weight: 900;
-    text-shadow: none;
 }
 
 #workspaces button label {
@@ -57,7 +57,6 @@ window#waybar {
 #workspaces button.active label {
     color: #ffffff;
     text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
-    /* Turn on faster than the previous dot fades out. */
     transition: color 120ms ease-out, text-shadow 120ms ease-out;
 }
 
@@ -66,16 +65,13 @@ window#waybar {
     opacity: 0;
     background-image: none;
     border: none;
-    /* Usuwanie domyślnego cienia i poświaty */
     box-shadow: none;
     outline: none;
 
-    /* Resetowanie natywnego wyglądu systemowego */
     -webkit-appearance: none;
     -moz-appearance: none;
 }
 
-/* Jeśli poświata pojawia się przy aktywacji/skupieniu (focus) */
 #pulseaudio-slider slider:focus,
 #pulseaudio-slider slider:active {
     outline: none;
@@ -96,6 +92,7 @@ window#waybar {
     box-shadow: 0px 0px 5px white;
 }
 
+#custom-power,
 #custom-layout {
     padding: 0 10px;
 }

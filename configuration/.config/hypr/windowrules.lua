@@ -21,6 +21,13 @@ hl.window_rule({
 
 -- Ignore maximize requests from apps
 hl.window_rule({ match = { class = ".*" }, suppress_event = "maximize" })
+
+-- Rofi is a layer surface: opt into the same blur used by normal windows.
+hl.layer_rule({
+    match = { namespace = "^rofi$" },
+    blur = true,
+    ignore_alpha = 0.1,
+})
 --
 -- Fix some dragging issues with XWayland
 -- hl.window_rule({

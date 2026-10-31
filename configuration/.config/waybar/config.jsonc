@@ -19,6 +19,7 @@
     "custom/sysmon",
     "battery",
     "clock",
+    "custom/power"
   ],
 
   "custom/layout": {
