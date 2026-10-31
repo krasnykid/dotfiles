@@ -30,12 +30,12 @@ hl.config({
 
         allow_tearing = false,
 
-        layout = "dwindle",
+        layout = "scrolling",
     },
 
     -- https://wiki.hypr.land/Configuring/Variables/#decoration
     decoration = {
-        rounding = 10,
+        rounding = 8,
         rounding_power = 2,
 
         -- https://wiki.hypr.land/0.57.0/configuring/core/config-options/#decoration-blur
@@ -71,7 +71,12 @@ hl.config({
 
     -- See https://wiki.hypr.land/Configuring/Master-Layout/ for more
     master = {
-        new_status = "master",
+        new_status = "slave",
+    },
+
+    scrolling = {
+        focus_fit_method = 0,
+        column_width = 0.75,
     },
 
     xwayland = {
