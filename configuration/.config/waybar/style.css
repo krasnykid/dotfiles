@@ -34,21 +34,31 @@ window#waybar {
 
 #workspaces button {
     background: transparent;
-    font-weight: 400;
-    /*color: #777777;*/
-    color: rgba(100, 100, 100, 0.3); /* Czarne tło z 50% przezroczystości */
+    background-image: none;
+    box-shadow: none;
     border: none;
+    /* Keep glyph weight constant so switching never shifts the dots. */
+    font-weight: 900;
+    text-shadow: none;
 }
 
-#workspaces button:hover {
+#workspaces button label {
+    color: rgba(100, 100, 100, 0.3);
+    /* A transparent shadow interpolates smoothly to the lit glow. */
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 0);
+    /* Turn off gently after the active class is removed. */
+    transition: color 180ms ease-out, text-shadow 180ms ease-out;
+}
+
+#workspaces button:hover label {
     color: #aaaaaa;
-    font-weight: 900;
 }
 
-#workspaces button.active {
-    color: white;
-    font-weight: 900;
-    text-shadow: 0px 0px 5px white;
+#workspaces button.active label {
+    color: #ffffff;
+    text-shadow: 0px 0px 5px rgba(255, 255, 255, 1);
+    /* Turn on faster than the previous dot fades out. */
+    transition: color 120ms ease-out, text-shadow 120ms ease-out;
 }
 
 #pulseaudio-slider slider {
